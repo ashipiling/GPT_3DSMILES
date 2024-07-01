@@ -1,0 +1,48 @@
+MODEL:
+  TOKENIZER_PATH: 'checkpoints/pretrain_copy_0129/tokenizer.json'
+  USE_EMA: False
+  POCKET_ENCODER:
+    encoder_layers: 6
+    encoder_embed_dim: 384
+    encoder_ffn_embed_dim: 384
+    encoder_attention_heads: 32
+    dropout: 0.2
+    emb_dropout: 0.0
+    attention_dropout: 0.1
+    activation_dropout: 0.0
+    activation_fn: gelu
+    post_ln: False
+
+  GPT_MODEL:
+    n_layer: 8
+    n_head: 12
+    n_embd: 384
+
+  ADAPTER:
+    use_adapter: False
+    adapter_name: drugs
+    REDUCTION_FACTOR: 16
+    ACTIVATION: 'gelu'
+
+SOLVER:
+  TRAIN_BSZ: 16 # 104
+  VALID_BSZ: 16 # 104
+  MAX_EPOCHS: 20
+  WARMUP_STEP_RATIO: 0.05
+  WEIGHT_DECAY: 0.0
+  OPTIMIZER_NAME: "AdamW"
+  BASE_LR: 2.0e-4
+  NUM_WORKERS: 32
+  GRADIENT_ACC: 1
+  LR_SCHEDULER: "linear"
+  CLIP_GRAD: False
+  SAVE_STEP: 1
+
+DATA:
+  MAX_SMILES_LEN: 1024
+  VOCAB_SIZE: 10531
+  MIN_FREQUENCY: 2
+  MAX_RES_LEN: 200
+  split_path: "data/split_by_name.pt"
+  data_dir: "data/cross_docked/"
+  offline_data: "data/pocketsmiles.pickle"

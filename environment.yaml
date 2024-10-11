@@ -1,4 +1,4 @@
-name: cu116
+name: gpt3dsmiles
 channels:
   - pytorch
   - nvidia

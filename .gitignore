@@ -1,7 +1,6 @@
 *.pyc
 tmp/*
 .env
-data/*
 node_modules
 .idea/*
 .DS_store

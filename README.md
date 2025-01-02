@@ -17,7 +17,7 @@ cd GPT_3DSMILES
 
 ## Checkpoints
 
-checkpoints download from (https://drive.google.com/drive/folders/10p_hfVPMKQShgP0pwEGofS5JacLDMYFl?usp=drive_link)
+checkpoints download from (https://drive.google.com/file/d/11iB2MBK4CRC7XIZqVwN0AXZR_RV3tf30/view?usp=sharing)
 
 Unzip and place in the (https://github.com/ashipiling/GPT_3DSMILES/tree/master/checkpoints/) directory.
 

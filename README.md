@@ -8,7 +8,7 @@
 Set up [conda](https://conda.io/en/latest/index.html) and create a new environment from
 `environment.yml` (if needed, make corresponding edits for GPU-compatibility).
 ```shell
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate gpt3dsmiles
 git clone https://github.com/ashipiling/GPT_3DSMILES.git
 cd GPT_3DSMILES
